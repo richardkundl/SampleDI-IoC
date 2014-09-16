@@ -1,6 +1,7 @@
 ﻿using SampleDI.Cache;
 using SampleDI.Configuration;
 using SampleDI.Domain.Repository;
+using SampleDI.Logging;
 using SampleDI.Service;
 using SampleDI.Service.Model;
 using System;
@@ -15,7 +16,11 @@ namespace SampleDI
     {
         static void Main(string[] args)
         {
-            var productService = new ProductService(new ProductRepository(), new SystemRuntimeCacheStorage(), new ConfigFileConfigurationRepository());
+            var productService = new ProductService(
+                                        new ProductRepository(),
+                                        new SystemRuntimeCacheStorage(),
+                                        new ConfigFileConfigurationRepository(),
+                                        new ConsoleLoggingService());
             var response = productService.GetProduct(new GetProductRequest { Id = 12 });
             if (response.Success)
             {

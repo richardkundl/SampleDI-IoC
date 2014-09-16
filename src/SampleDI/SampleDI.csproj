@@ -45,12 +45,15 @@
   <ItemGroup>
     <Compile Include="Cache\SystemRuntimeCacheStorage.cs" />
     <Compile Include="Cache\ICacheStorage.cs" />
-    <Compile Include="Cache\NoCacheStorage.cs" />
+    <Compile Include="Cache\NullCacheStorage.cs" />
     <Compile Include="Configuration\ConfigFileConfigurationRepository.cs" />
     <Compile Include="Configuration\IConfigurationRepository.cs" />
     <Compile Include="Domain\Entity\Product.cs" />
     <Compile Include="Domain\Repository\IProductRepository.cs" />
     <Compile Include="Domain\Repository\ProductRepository.cs" />
+    <Compile Include="Logging\ConsoleLoggingService.cs" />
+    <Compile Include="Logging\ILoggingService.cs" />
+    <Compile Include="Logging\NullLoggingService.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Service\IProductService.cs" />

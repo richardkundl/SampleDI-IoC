@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace SampleDI.Cache
 {
-    public class NoCacheStorage: ICacheStorage
+    public class NullCacheStorage: ICacheStorage
     {
         public void Remove(string key)
         {
