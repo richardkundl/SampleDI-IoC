@@ -1,5 +1,6 @@
 ﻿using SampleDI.Cache;
 using SampleDI.Configuration;
+using SampleDI.Context;
 using SampleDI.Domain.Repository;
 using SampleDI.Logging;
 using SampleDI.Service;
@@ -8,6 +9,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 
 namespace SampleDI
@@ -16,11 +18,12 @@ namespace SampleDI
     {
         static void Main(string[] args)
         {
-            var productService = new ProductService(
-                                        new ProductRepository(),
-                                        new SystemRuntimeCacheStorage(),
-                                        new ConfigFileConfigurationRepository(),
-                                        new ConsoleLoggingService());
+            var productRepository = new ProductRepository();
+            var cacheStorage = new SystemRuntimeCacheStorage();
+            var configurationRepository = new ConfigFileConfigurationRepository();
+            var loggingService = new Log4NetLoggingService(configurationRepository, new ThreadContextService());
+            var productService = new ProductService(productRepository, cacheStorage, configurationRepository, loggingService);
+
             var response = productService.GetProduct(new GetProductRequest { Id = 12 });
             if (response.Success)
             {

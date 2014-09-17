@@ -61,6 +61,7 @@
     <Compile Include="Domain\Repository\ProductRepository.cs" />
     <Compile Include="Logging\ConsoleLoggingService.cs" />
     <Compile Include="Logging\ILoggingService.cs" />
+    <Compile Include="Logging\Log4NetLoggingService.cs" />
     <Compile Include="Logging\NullLoggingService.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -71,7 +72,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
-    <None Include="log4net.config" />
+    <Content Include="log4net.config">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup />

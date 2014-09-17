@@ -32,6 +32,7 @@ namespace SampleDI.Context
             catch
             {
             }
+
             return userName;
         }
 
