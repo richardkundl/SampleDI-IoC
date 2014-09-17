@@ -32,10 +32,14 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="log4net">
+      <HintPath>..\packages\log4net.2.0.3\lib\net40-full\log4net.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Configuration" />
     <Reference Include="System.Core" />
     <Reference Include="System.Runtime.Caching" />
+    <Reference Include="System.Web" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -48,6 +52,10 @@
     <Compile Include="Cache\NullCacheStorage.cs" />
     <Compile Include="Configuration\ConfigFileConfigurationRepository.cs" />
     <Compile Include="Configuration\IConfigurationRepository.cs" />
+    <Compile Include="Context\ContextProperties.cs" />
+    <Compile Include="Context\HttpContextService.cs" />
+    <Compile Include="Context\IContextService.cs" />
+    <Compile Include="Context\ThreadContextService.cs" />
     <Compile Include="Domain\Entity\Product.cs" />
     <Compile Include="Domain\Repository\IProductRepository.cs" />
     <Compile Include="Domain\Repository\ProductRepository.cs" />
@@ -63,6 +71,8 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+    <None Include="log4net.config" />
+    <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
