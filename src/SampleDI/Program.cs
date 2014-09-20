@@ -2,6 +2,7 @@
 using SampleDI.Configuration;
 using SampleDI.Context;
 using SampleDI.Domain.Repository;
+using SampleDI.File;
 using SampleDI.Logging;
 using SampleDI.Service;
 using SampleDI.Service.Model;
@@ -18,10 +19,13 @@ namespace SampleDI
     {
         static void Main(string[] args)
         {
-            var productRepository = new ProductRepository();
-            var cacheStorage = new SystemRuntimeCacheStorage();
-            var configurationRepository = new ConfigFileConfigurationRepository();
-            var loggingService = new Log4NetLoggingService(configurationRepository, new ThreadContextService());
+            IProductRepository productRepository = new ProductRepository();
+            ICacheStorage cacheStorage = new SystemRuntimeCacheStorage();
+            IConfigurationRepository configurationRepository = new ConfigFileConfigurationRepository();
+            IContextService contextService =  new ThreadContextService();
+            IFileService fileService = new DefaultFileService();
+            ILoggingService loggingService = new Log4NetLoggingService(configurationRepository, contextService);
+            // loggingService = new ConsoleLoggingService();
             var productService = new ProductService(productRepository, cacheStorage, configurationRepository, loggingService);
 
             var response = productService.GetProduct(new GetProductRequest { Id = 12 });

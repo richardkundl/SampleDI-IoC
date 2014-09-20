@@ -59,6 +59,9 @@
     <Compile Include="Domain\Entity\Product.cs" />
     <Compile Include="Domain\Repository\IProductRepository.cs" />
     <Compile Include="Domain\Repository\ProductRepository.cs" />
+    <Compile Include="File\DefaultFileService.cs" />
+    <Compile Include="File\IFileService.cs" />
+    <Compile Include="Helper\DateHelper.cs" />
     <Compile Include="Logging\ConsoleLoggingService.cs" />
     <Compile Include="Logging\ILoggingService.cs" />
     <Compile Include="Logging\Log4NetLoggingService.cs" />
