@@ -56,11 +56,17 @@
     <Compile Include="Context\HttpContextService.cs" />
     <Compile Include="Context\IContextService.cs" />
     <Compile Include="Context\ThreadContextService.cs" />
+    <Compile Include="Cryptography\AsymmetricDecryptionArguments.cs" />
+    <Compile Include="Cryptography\AsymmetricEncryptionArguments.cs" />
+    <Compile Include="Cryptography\AsymmetricEncryptionResult.cs" />
+    <Compile Include="Cryptography\AsymmetricKeyPairGenerationResult.cs" />
     <Compile Include="Cryptography\CipherTextDecryptionResult.cs" />
     <Compile Include="Cryptography\CommonSymmetricCryptoArguments.cs" />
+    <Compile Include="Cryptography\IAsymmetricCryptographyService.cs" />
     <Compile Include="Cryptography\ISymmetricCryptographyService.cs" />
     <Compile Include="Cryptography\ResponseBase.cs" />
     <Compile Include="Cryptography\RijndaelManagedSymmetricEncryptionService.cs" />
+    <Compile Include="Cryptography\RsaAsymmetricCryptographyService.cs" />
     <Compile Include="Cryptography\SymmetricDecryptionArguments.cs" />
     <Compile Include="Cryptography\SymmetricEncryptionArguments.cs" />
     <Compile Include="Cryptography\SymmetricEncryptionResult.cs" />

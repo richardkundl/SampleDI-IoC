@@ -8,7 +8,7 @@ namespace SampleDI.Tests
     public class RijndaelManagedSymmetricEncryptionServiceTest
     {
         [TestMethod]
-        public void TestMethod1()
+        public void RijndaelManagedSymmetricEncryptionServiceEncryptDecryptTest()
         {
             var symmetricService = new RijndaelManagedSymmetricEncryptionService();
             var validKey = symmetricService.GenerateSymmetricKey(128);
