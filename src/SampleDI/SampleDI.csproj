@@ -59,6 +59,13 @@
     <Compile Include="Domain\Entity\Product.cs" />
     <Compile Include="Domain\Repository\IProductRepository.cs" />
     <Compile Include="Domain\Repository\ProductRepository.cs" />
+    <Compile Include="Email\EmailArguments.cs" />
+    <Compile Include="Email\EmailExtensions.cs" />
+    <Compile Include="Email\EmailSendingResult.cs" />
+    <Compile Include="Email\EmailService.cs" />
+    <Compile Include="Email\EmbeddedEmailResource.cs" />
+    <Compile Include="Email\EmbeddedEmailResourceType.cs" />
+    <Compile Include="Email\IEmailService.cs" />
     <Compile Include="File\DefaultFileService.cs" />
     <Compile Include="File\IFileService.cs" />
     <Compile Include="Helper\DateHelper.cs" />

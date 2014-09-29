@@ -2,6 +2,7 @@
 using SampleDI.Configuration;
 using SampleDI.Context;
 using SampleDI.Domain.Repository;
+using SampleDI.Email;
 using SampleDI.File;
 using SampleDI.Logging;
 using SampleDI.Service;
@@ -26,6 +27,7 @@ namespace SampleDI
             IFileService fileService = new DefaultFileService();
             ILoggingService loggingService = new Log4NetLoggingService(configurationRepository, contextService);
             // loggingService = new ConsoleLoggingService();
+            IEmailService emailService = new EmailService();
             var productService = new ProductService(productRepository, cacheStorage, configurationRepository, loggingService);
 
             var response = productService.GetProduct(new GetProductRequest { Id = 12 });
