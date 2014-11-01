@@ -54,6 +54,7 @@
   <ItemGroup>
     <Compile Include="Cryptography\RijndaelManagedSymmetricEncryptionServiceTest.cs" />
     <Compile Include="Cryptography\RsaAsymmetricCryptographyServiceTest.cs" />
+    <Compile Include="Hash\RsaPkcs1DigitalSignatureServiceTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

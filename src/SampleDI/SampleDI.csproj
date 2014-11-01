@@ -83,6 +83,16 @@
     <Compile Include="Email\IEmailService.cs" />
     <Compile Include="File\DefaultFileService.cs" />
     <Compile Include="File\IFileService.cs" />
+    <Compile Include="Hash\DigitalSignatureCreationArguments.cs" />
+    <Compile Include="Hash\DigitalSignatureCreationResult.cs" />
+    <Compile Include="Hash\DigitalSignatureVerificationArguments.cs" />
+    <Compile Include="Hash\DigitalSignatureVerificationResult.cs" />
+    <Compile Include="Hash\HashResult.cs" />
+    <Compile Include="Hash\IEncryptedDigitalSignatureService.cs" />
+    <Compile Include="Hash\IHashingService.cs" />
+    <Compile Include="Hash\RsaPkcs1DigitalSignatureService.cs" />
+    <Compile Include="Hash\Sha1ManagedHashingService.cs" />
+    <Compile Include="Hash\Sha512ManagedHashingService.cs" />
     <Compile Include="Helper\DateHelper.cs" />
     <Compile Include="Logging\ConsoleLoggingService.cs" />
     <Compile Include="Logging\ILoggingService.cs" />
