@@ -19,11 +19,11 @@ namespace SampleDI.Cache
         {
             var cache = MemoryCache.Default;
             var policy = new CacheItemPolicy
-			{
-				AbsoluteExpiration = DateTimeOffset.UtcNow.AddMinutes(3)
-			};
+	    {
+		AbsoluteExpiration = DateTimeOffset.UtcNow.AddMinutes(3)
+	    };
 
-			cache.Set(key, value, policy);
+	    cache.Set(key, value, policy);
         }
 
         public void Set(string key, object data, DateTime absoluteExpiration, TimeSpan slidingExpiration)
